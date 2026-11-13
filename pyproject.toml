@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentes-ia-carreira"
+version = "0.1.0"
+description = "Agentes de IA para analisar vagas e planejar estudos"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Jhonathan Da Silva Gomes" }]
+dependencies = ["openai-agents"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+agentes-carreira = "career_agents.main:main"
